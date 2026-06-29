@@ -1,0 +1,31 @@
+{
+  "name": "almacen-de-obra",
+  "version": "1.0.0",
+  "description": "Sistema de Gestión de Almacén de Obra",
+  "private": true,
+  "scripts": {
+    "backend:install": "cd backend && npm install",
+    "frontend:install": "cd frontend && npm install",
+    "install-all": "npm install && npm run backend:install && npm run frontend:install",
+    "backend:dev": "cd backend && npm run dev",
+    "frontend:dev": "cd frontend && npm start",
+    "backend:build": "cd backend && npm run build",
+    "frontend:build": "cd frontend && npm run build",
+    "backend:start": "cd backend && npm start",
+    "db:init": "cd database && psql -U postgres -f schema.sql",
+    "db:seed": "cd database && psql -U postgres -f seeds.sql"
+  },
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "keywords": [
+    "almacen",
+    "obra",
+    "kardex",
+    "control",
+    "materiales"
+  ],
+  "author": "robertn2510",
+  "license": "PRIVATE"
+}
